@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="Discover TinVin AI and TinVin Social. One brand, two powerful platforms.">
+  <title>TinVin — AI & Social</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #080d1b;
+      --gold: #e9bd63;
+      --blue: #51b8ff;
+      --text: #f5f7ff;
+      --muted: #9ba8c0;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      background:
+        radial-gradient(ellipse at 15% 10%, #15315a 0%, transparent 40%),
+        radial-gradient(ellipse at 90% 80%, #192447 0%, transparent 42%),
+        var(--bg);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .navbar {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 26px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 29px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+    }
+
+    .logo span { color: var(--gold); }
+
+    .nav-tag {
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 105px 20px 65px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 17px;
+      border: 1px solid #ffffff20;
+      border-radius: 50px;
+      color: var(--gold);
+      background: #ffffff08;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 88px);
+      line-height: 1.05;
+      letter-spacing: -5px;
+      font-weight: 900;
+    }
+
+    h1 span {
+      background: linear-gradient(110deg, #ffffff, #e9bd63);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 520px;
+      margin: 25px auto 0;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .products {
+      max-width: 950px;
+      margin: 20px auto 100px;
+      padding: 0 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .product {
+      position: relative;
+      min-height: 330px;
+      padding: 34px;
+      border: 1px solid #ffffff18;
+      border-radius: 27px;
+      background: linear-gradient(145deg, #ffffff12, #ffffff04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      overflow: hidden;
+      transition: .3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      border-color: #e9bd6370;
+      box-shadow: 0 20px 60px #0005;
+    }
+
+    .product::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      right: -65px;
+      top: -65px;
+      border-radius: 50%;
+      background: var(--glow);
+      filter: blur(70px);
+      opacity: .3;
+      pointer-events: none;
+    }
+
+    .ai { --glow: #51b8ff; }
+    .social { --glow: #e9bd63; }
+
+    .icon {
+      width: 65px;
+      height: 65px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      font-size: 29px;
+      background: #ffffff12;
+      border: 1px solid #ffffff18;
+      margin-bottom: 27px;
+    }
+
+    .product h2 {
+      font-size: 29px;
+      margin-bottom: 13px;
+      letter-spacing: -.8px;
+    }
+
+    .product p {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+      min-height: 48px;
+      margin-bottom: 27px;
+    }
+
+    .open {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 21px;
+      border-radius: 12px;
+      background: #ffffff12;
+      border: 1px solid #ffffff25;
+      font-weight: 700;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    .ai .open:hover {
+      background: var(--blue);
+      color: #07101e;
+    }
+
+    .social .open:hover {
+      background: var(--gold);
+      color: #17120a;
+    }
+
+    .arrow { font-size: 19px; }
+
+    footer {
+      border-top: 1px solid #ffffff12;
+      text-align: center;
+      padding: 28px 15px;
+      color: #748198;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 650px) {
+      .hero { padding-top: 75px; }
+      h1 { letter-spacing: -3px; }
+      .products { grid-template-columns: 1fr; }
+      .product { min-height: 290px; }
+      .nav-tag { font-size: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">Tin<span>Vin</span></a>
+    <div class="nav-tag">AI & SOCIAL PLATFORM</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">WELCOME TO TINVIN</div>
+      <h1>One Brand.<br><span>Infinite Possibilities.</span></h1>
+      <p>
+        Discover a smarter digital experience.
+        Explore our AI technology and connect with
+        people around the world.
+      </p>
+    </section>
+
+    <section class="products">
+      <article class="product ai">
+        <div class="icon">✦</div>
+        <h2>TinVin AI</h2>
+        <p>
+          Your intelligent AI workspace.
+          Chat, translate and create with powerful AI tools.
+        </p>
+        <a class="open" href="https://ai.tin-vin.com">
+          Explore AI <span class="arrow">↗</span>
+        </a>
+      </article>
+
+      <article class="product social">
+        <div class="icon">◎</div>
+        <h2>TinVin Social</h2>
+        <p>
+          Connect with the world.
+          Share your moments, discover people and build connections.
+        </p>
+        <a class="open" href="https://social.tin-vin.com">
+          Explore Social <span class="arrow">↗</span>
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 TINVIN. ALL RIGHTS RESERVED.
+  </footer>
+</body>
+</html>
